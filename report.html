@@ -1,0 +1,443 @@
+<html>
+<head><style type='text/css'>
+body, table {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-style: italic;
+}
+
+.selected {
+    background-color: #ffffcc;
+}
+
+.status_done {
+    background-color: #eeffee;
+}
+
+.status_passed {
+    background-color: #ccffcc;
+}
+
+.status_failed {
+    background-color: #ffcccc;
+}
+
+.breakpoint {
+    background-color: #cccccc;
+    border: 1px solid black;
+}
+</style><title>Test suite results</title></head>
+<body>
+<h1>Test suite results </h1>
+
+<table>
+<tr>
+<td>result:</td>
+<td>passed</td>
+</tr>
+<tr>
+<td>totalTime:</td>
+<td>64</td>
+</tr>
+<tr>
+<td>numTestTotal:</td>
+<td>5</td>
+</tr>
+<tr>
+<td>numTestPasses:</td>
+<td>5</td>
+</tr>
+<tr>
+<td>numTestFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandPasses:</td>
+<td>3</td>
+</tr>
+<tr>
+<td>numCommandFailures:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>numCommandErrors:</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Selenium Version:</td>
+<td>2.53</td>
+</tr>
+<tr>
+<td>Selenium Revision:</td>
+<td>.1</td>
+</tr>
+<tr>
+<td>
+<table id="suiteTable" class="selenium" border="1" cellpadding="1" cellspacing="1"><tbody>
+<tr class="title status_passed"><td><b>Test Suite</b></td></tr>
+<tr class="  status_passed"><td><a href="#testresult0">login1</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult1">newCoupon1</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult2">searchcoupon</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult3">deleteCoupon</a></td></tr>
+<tr class="  status_passed"><td><a href="#testresult4">logout</a></td></tr>
+</tbody></table>
+
+
+</td>
+<td>&nbsp;</td>
+</tr>
+</table><table><tr>
+<td><a name="testresult0">login1.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">login1</td></tr>
+</thead><tbody>
+<!--о�?к�?�?ва�? �?�?�?ани�?�?-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel/auth/login/</td>
+	<td></td>
+</tr>
+<!--нажима�? кнопк�? Login (�?би�?а�? гало�?к�? �? помни�?�? мен�?)-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<!--�?би�?а�? галк�? помни�?�? мен�? -->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>name=remember</td>
+	<td></td>
+</tr>
+<!--в поле email and password ввож�? данн�?е-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>//*[@id='login-modal']//input[@name='email']</td>
+	<td>demo@open-eshop.com</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>//*[@id='login-modal']//input[@name='password']</td>
+	<td>demo</td>
+</tr>
+<!--нажима�? кнопк�? Login-->
+<!--или во�? �?�?о�? лока�?о�? можно под�?�?ави�?�?//button[@type='submit']-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<!--�?�?авл�? ожидание заг�?�?зки �?�?�?ани�?�? до 10 �?ек-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel</td>
+	<td></td>
+</tr>
+<!--�?делал п�?ове�?к�? именно на в�?од на  главн�?�? �?�?�?ани�?�?. �?�?ли в�?е ок зна�?и�? �?�?ена�?ий Login в�?полнен �?�?пе�?но -->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertTitle</td>
+	<td>Welcome - Open eShop Demo</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult1">newCoupon1.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">newCoupon1</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel</td>
+	<td></td>
+</tr>
+<!--помен�?л лока�?о�?-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>link=eShop</td>
+	<td></td>
+</tr>
+<!--и�?пол�?з�?�? нав�?ки пол�?�?енн�?е на �?�?енинге �?оздал лока�?�?. п�?авда �?або�?ае�? и //a[@title='Coupons'] �? по�?�?авил ва�?иан�? подлиннее �?ак как �?ам е�?�?�? ID-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>//*[@id='collapseOne']//a[@title='Coupons']</td>
+	<td></td>
+</tr>
+<!--�?�?авл�? ожидание на в�?полнение команд�?  до 10 �?ек-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<!--�?�?авл�? ожидание на в�?полнение команд�?  до 10 �?ек-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=name</td>
+	<td>Duck</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=discount_amount</td>
+	<td>5</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=valid_date</td>
+	<td>2017-03-21</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>id=number_coupons</td>
+	<td>14</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<!--�?�?авл�? ожидание на в�?полнение команд�?  до 10 �?ек-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult2">searchcoupon.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">searchcoupon</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel/Coupon?name=</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>name=name</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>type</td>
+	<td>name=name</td>
+	<td>Duck</td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>css=button.btn</td>
+	<td></td>
+</tr>
+<!--�?�?авл�? ожидание на в�?полнение команд�?  до 10 �?ек-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--п�?ове�?�?�? �?�?о к�?пон Duck �?�?�?е�?�?в�?е�?-->
+<!--Так как лока�?о�? динами�?е�?кий �? его �?озда�? из пазлов. �?олн�?й пазл в�?гл�?ди�? �?ак  //*[@id='content']//table/tbody/tr/td[1], �? его �?�?езал-->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertText</td>
+	<td>//*[@id='content']//td[1]</td>
+	<td>Duck</td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult3">deleteCoupon.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">deleteCoupon</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel/Coupon?name=duck</td>
+	<td></td>
+</tr>
+<!--немного �?ок�?а�?ил лока�?�?-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>css=i.glyphicon-trash</td>
+	<td></td>
+</tr>
+<!--�? задание напи�?ано, �?�?о �?�?�? баг и н�?жно по�?�?ави�?�? па�?з�?-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--дела�? п�?ове�?к�? на заг�?�?зк�?-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>css=i.glyphicon-trash</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>css=button.confirm</td>
+	<td></td>
+</tr>
+<!--�?�?авл�? ожидание на в�?полнение �?далени�?-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForElementPresent</td>
+	<td>css=button.confirm</td>
+	<td></td>
+</tr>
+<!--�?�?ове�?ка �?�?о к�?пона �? надпи�?�?�? Duck не�? -->
+<tr class="  status_passed" style="cursor: pointer;">
+	<td>assertNotText</td>
+	<td>//*[@id='content']/div[3]/div</td>
+	<td>Duck</td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td><a name="testresult4">logout.html</a><br/><div>
+<table border="1" cellpadding="1" cellspacing="1">
+<thead>
+<tr class="title status_passed"><td rowspan="1" colspan="3">logout</td></tr>
+</thead><tbody>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel/Coupon?name=Duck</td>
+	<td></td>
+</tr>
+<!--е�?�?�? е�?е лока�?о�? ".btn.dropdown-toggle.btn-success.navbar-btn", но �?о�? �?�?о ниже н�?ави�?�?�? бол�?�?е-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>css=span.caret</td>
+	<td></td>
+</tr>
+<!--�?о �?екоменда�?ии �?пе�?иали�?�?ов возв�?а�?а�? назад-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>click</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<!--�?�?ли м�? не в�?�?ли из п�?о�?к�?а. �?е �?делали Logout  �?о �?�?и две п�?ове�?ки в�?полн�?�?�?�? не б�?д�?�?-->
+<!--заменил п�?ове�?ки  Assert на Wait-->
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForText</td>
+	<td>//*[@id='login-modal']//input[@name='email']</td>
+	<td></td>
+</tr>
+<tr class="  status_done" style="cursor: pointer;">
+	<td>waitForText</td>
+	<td>//*[@id='login-modal']//input[@name='password']</td>
+	<td></td>
+</tr>
+</tbody></table>
+
+
+</div></td>
+<td>&nbsp;</td>
+</tr></table><pre>
+info: Starting test /selenium-server/tests/login1.html
+info: Executing: |open | http://open-eshop.stqa.ru/oc-panel/auth/login/ |  |
+info: Executing: |click | link=Login |  |
+info: Executing: |click | name=remember |  |
+info: Executing: |type | //*[@id=&apos;login-modal&apos;]//input[@name=&apos;email&apos;] | demo@open-eshop.com |
+info: Executing: |type | //*[@id=&apos;login-modal&apos;]//input[@name=&apos;password&apos;] | demo |
+info: Executing: |click | css=button.btn.btn-primary |  |
+info: Executing: |waitForPageToLoad | 10000 |  |
+info: Executing: |open | http://open-eshop.stqa.ru/oc-panel |  |
+info: Executing: |assertTitle | Welcome - Open eShop Demo |  |
+info: Starting test /selenium-server/tests/newCoupon1.html
+info: Executing: |open | http://open-eshop.stqa.ru/oc-panel |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | link=eShop |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | //*[@id=&apos;collapseOne&apos;]//a[@title=&apos;Coupons&apos;] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForPageToLoad | 10000 |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | //div[@id=&apos;content&apos;]/a |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForPageToLoad | 10000 |  |
+info: Executing: |click | id=name |  |
+info: Executing: |type | id=name | Duck |
+info: Executing: |type | id=discount_amount | 5 |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |type | name=valid_date | 2017-03-21 |
+info: Executing: |type | id=number_coupons | 14 |
+info: Executing: |click | name=submit |  |
+info: Executing: |waitForPageToLoad | 10000 |  |
+info: Starting test /selenium-server/tests/searchcoupon.html
+info: Executing: |open | http://open-eshop.stqa.ru/oc-panel/Coupon?name= |  |
+info: Executing: |click | name=name |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |type | name=name | Duck |
+info: Executing: |click | css=button.btn |  |
+info: Executing: |waitForPageToLoad | 10000 |  |
+info: Executing: |assertText | //*[@id=&apos;content&apos;]//td[1] | Duck |
+info: Starting test /selenium-server/tests/deleteCoupon.html
+info: Executing: |open | http://open-eshop.stqa.ru/oc-panel/Coupon?name=duck |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |click | css=i.glyphicon-trash |  |
+info: Executing: |pause | 500 |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForElementPresent | css=i.glyphicon-trash |  |
+info: Executing: |click | css=button.confirm |  |
+info: Executing: |waitForElementPresent | css=button.confirm |  |
+info: Executing: |assertNotText | //*[@id=&apos;content&apos;]/div[3]/div | Duck |
+info: Starting test /selenium-server/tests/logout.html
+info: Executing: |open | http://open-eshop.stqa.ru/oc-panel/Coupon?name=Duck |  |
+info: Executing: |click | css=span.caret |  |
+info: Executing: |click | link=Logout |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForText | //*[@id=&apos;login-modal&apos;]//input[@name=&apos;email&apos;] |  |
+info: Selenium 1.0 (Core, RC, etc) is no longer under active development. Please update to WebDriver ASAP
+info: Executing: |waitForText | //*[@id=&apos;login-modal&apos;]//input[@name=&apos;password&apos;] |  |
+</pre></body></html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>newCoupon1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">newCoupon1</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel</td>
+	<td></td>
+</tr>
+<!--поменял локатор-->
+<tr>
+	<td>click</td>
+	<td>link=eShop</td>
+	<td></td>
+</tr>
+<!--используя навыки полученные на тренинге создал локаут. правда работает и //a[@title='Coupons'] я поставил вариант подлиннее так как там есть ID-->
+<tr>
+	<td>click</td>
+	<td>//*[@id='collapseOne']//a[@title='Coupons']</td>
+	<td></td>
+</tr>
+<!--ставлю ожидание на выполнение команды  до 10 сек-->
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<!--ставлю ожидание на выполнение команды  до 10 сек-->
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>Duck</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=discount_amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=valid_date</td>
+	<td>2017-03-21</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=number_coupons</td>
+	<td>14</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+<!--ставлю ожидание на выполнение команды  до 10 сек-->
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>deleteCoupon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">deleteCoupon</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel/Coupon?name=duck</td>
+	<td></td>
+</tr>
+<!--немного сократил локаут-->
+<tr>
+	<td>click</td>
+	<td>css=i.glyphicon-trash</td>
+	<td></td>
+</tr>
+<!--В задание написано, что тут баг и нужно поставить паузу-->
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<!--делаю проверку на загрузку-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=i.glyphicon-trash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.confirm</td>
+	<td></td>
+</tr>
+<!--ставлю ожидание на выполнение удаления-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=button.confirm</td>
+	<td></td>
+</tr>
+<!--Проверка что купона с надписью Duck нет -->
+<tr>
+	<td>assertNotText</td>
+	<td>//*[@id='content']/div[3]/div</td>
+	<td>Duck</td>
+</tr>
+</tbody></table>
+</body>
+</html>

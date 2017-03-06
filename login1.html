@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://change-this-to-the-site-you-are-testing/" />
+<title>login1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">login1</td></tr>
+</thead><tbody>
+<!--открываю страницу-->
+<tr>
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel/auth/login/</td>
+	<td></td>
+</tr>
+<!--нажимаю кнопку Login (убираю галочку с помнить меня)-->
+<tr>
+	<td>click</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<!--убираю галку помнить меня -->
+<tr>
+	<td>click</td>
+	<td>name=remember</td>
+	<td></td>
+</tr>
+<!--в поле email and password ввожу данные-->
+<tr>
+	<td>type</td>
+	<td>//*[@id='login-modal']//input[@name='email']</td>
+	<td>demo@open-eshop.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//*[@id='login-modal']//input[@name='password']</td>
+	<td>demo</td>
+</tr>
+<!--нажимаю кнопку Login-->
+<!--или вот этот локатор можно подставить//button[@type='submit']-->
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<!--ставлю ожидание загрузки страницы до 10 сек-->
+<tr>
+	<td>waitForPageToLoad</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://open-eshop.stqa.ru/oc-panel</td>
+	<td></td>
+</tr>
+<!--сделал проверку именно на вход на  главную страницу. Если все ок значит сценарий Login выполнен успешно -->
+<tr>
+	<td>assertTitle</td>
+	<td>Welcome - Open eShop Demo</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
